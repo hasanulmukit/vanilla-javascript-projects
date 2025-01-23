@@ -1,0 +1,135 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-container {
+    position: relative;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    padding: 0 18px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.select-btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+}
+
+.arrow-dwn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    background: #6e93f7;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.select-btn.open .arrow-dwn {
+    transform: rotate(-180deg);
+}
+
+.list-items {
+    margin-top: 12px;
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.select-btn.open ~ .list-items {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list-items .item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.list-items .item:hover {
+    background: #f0f4ff;
+}
+
+.item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 14px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.item.checked .checkbox {
+    background: #6e93f7;
+    border-color: #6e93f7;
+}
+
+.check-icon {
+    color: #fff;
+    font-size: 12px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.item.checked .check-icon {
+    transform: scale(1);
+}
