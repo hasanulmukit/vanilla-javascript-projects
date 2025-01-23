@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 370px;
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.select-btn,
+li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-btn {
+  height: 60px;
+  padding: 0 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn i {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.wrapper.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.content {
+  display: none;
+  margin-top: 10px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.search {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.search i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 20px;
+}
+
+.search input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px 0 40px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+}
+
+.search input:focus {
+  border: 1.5px solid #6a11cb;
+}
+
+.options {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.options li {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.options li:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+}
