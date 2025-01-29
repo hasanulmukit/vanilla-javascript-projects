@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left top, #e4f742, #7fb995);
+}
+.container {
+  max-width: 350px;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4e54c8;
+}
+
+.input_field {
+  position: relative;
+  margin: 15px 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #4e54c8;
+}
+
+.captch_box input {
+  font-size: 22px;
+  color: #333333;
+  letter-spacing: 2px;
+  background-color: #f3f3f3;
+  pointer-events: none;
+}
+
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: linear-gradient(to left top, #232b42, #6b1c6e);  
+  color: #ffffff;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.refresh_button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.message {
+  font-size: 14px;
+  color: #333333;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+.message.active {
+  display: block;
+}
+
+.button button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to left top, #c12713, #5a678b);  
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button.disabled button {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button button:hover {
+  background: linear-gradient(135deg, #3d47b7, #7a83ee);
+}
+
+.button button:active {
+  transform: scale(0.98);
+}
