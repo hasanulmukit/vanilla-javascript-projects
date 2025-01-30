@@ -1,0 +1,135 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to left top, #26565c, #a3f08b);}
+
+.show-modal {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background: linear-gradient(to left top, #5b0165, #5bb899);  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.show-modal:hover {
+  background: linear-gradient(to left top, #802edb, #3c095a);}
+
+.bottom-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.3s ease;
+}
+
+.bottom-sheet.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bottom-sheet .sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.bottom-sheet .content {
+  width: 100%;
+  background: #fff;
+  max-height: 100vh;
+  height: 60vh;
+  max-width: 600px;
+  padding: 20px;
+  transform: translateY(100%);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bottom-sheet.show .content {
+  transform: translateY(0);
+}
+
+.bottom-sheet .header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.header .drag-icon {
+  cursor: grab;
+  padding: 10px;
+}
+
+.header .drag-icon span {
+  height: 4px;
+  width: 50px;
+  display: block;
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.bottom-sheet .body {
+  height: calc(100% - 20px);
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.bottom-sheet .body h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bottom-sheet .body p,
+.bottom-sheet .body ul li {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.bottom-sheet .body ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.bottom-sheet .body ul li {
+  font-size: 1rem;
+}
+
+.bottom-sheet .body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bottom-sheet .body::-webkit-scrollbar-thumb {
+  background: #007BFF;
+  border-radius: 4px;
+}
