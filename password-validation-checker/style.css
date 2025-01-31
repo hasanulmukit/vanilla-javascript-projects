@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4285F4, #6A98F0);
+}
+
+.wrapper {
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: #333;
+  font-weight: 600;
+}
+
+.pass-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pass-field input {
+  width: 100%;
+  padding: 15px 40px 15px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.pass-field i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+
+.strength-bar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.strength-bar span {
+  flex: 1;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.strength-bar span.active {
+  background: #4285F4;
+}
+
+.button-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.copy-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #4285F4;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #3367d6;
+}
+
+.content p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.requirement-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.requirement-list li.valid i {
+  color: #4285F4;
+}
+
+.requirement-list li.valid span {
+  color: #333;
+}
+
+.requirement-list li i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+    padding: 15px;
+  }
+}
