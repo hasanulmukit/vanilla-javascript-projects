@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --dark: #1E293B;
+  --light: #FFFFFF;
+  --success: linear-gradient(135deg, #4CAF50, #81C784);
+  --error: linear-gradient(135deg, #F44336, #EF9A9A);
+  --warning: linear-gradient(135deg, #FF9800, #FFB74D);
+  --info: linear-gradient(135deg, #2196F3, #64B5F6);
+  --text-dark: #102A43;
+  --text-light: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.notifications {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  list-style: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light);
+  color: var(--text-dark);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease forwards;
+  overflow: hidden;
+}
+
+.toast.success { background: var(--success); }
+.toast.error { background: var(--error); }
+.toast.warning { background: var(--warning); }
+.toast.info { background: var(--info); }
+
+.toast i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.toast span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.toast .close-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--light);
+  background: transparent;
+  border: none;
+}
+
+.buttons .btn {
+  background: var(--dark);
+  color: var(--light);
+  border: 2px solid var(--light);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.buttons .btn:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media screen and (max-width: 480px) {
+  .toast {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
